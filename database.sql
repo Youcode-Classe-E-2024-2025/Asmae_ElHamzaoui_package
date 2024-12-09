@@ -1,7 +1,7 @@
 
 CREATE DATABASE gestion_packages ; -- creation du base de donnee
 
-USE package; --l'utilisation du base de donnee 
+USE gestion_packages; --l'utilisation du base de donnee 
 
 -- tableau package 
 CREATE TABLE package (
@@ -38,3 +38,4 @@ CREATE TABLE version (
   date_sortie_version VARCHAR(255) NOT NULL,
   FOREIGN KEY (id_Package) REFERENCES package(id_Package)
 );
+
