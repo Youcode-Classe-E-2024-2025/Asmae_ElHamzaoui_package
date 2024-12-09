@@ -39,3 +39,4 @@ CREATE TABLE version (
   FOREIGN KEY (id_Package) REFERENCES package(id_Package)
 );
 
+SELECT * FROM  auteur;
