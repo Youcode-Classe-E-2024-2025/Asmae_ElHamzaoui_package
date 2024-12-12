@@ -79,6 +79,30 @@
 <!-- Fin section3 -->
 
 
+<!-- début section4 : Formulaire pour ajouter une collaboration -->
+<section id="colaboration" class="formulaires">
+    <h2>Associer un Auteur à un Package</h2>
+    <form action="" method="post">
+        <label for="package_id">Sélectionner un Package :</label><br>
+        <select name="package_id" required>
+        
+        </select><br><br>
+
+        <label for="auteur_id">Sélectionner un Auteur :</label><br>
+        <select name="auteur_id" required>
+        
+        </select><br><br>
+
+        <label for="date_contribution">Date de Contribution :</label><br>
+        <input type="date" name="date_contribution" required><br><br>
+
+        <button type="submit">Associer Auteur au Package</button>
+    </form>
+</section>
+<!-- Fin section4 -->
+
+
+
 
     <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
