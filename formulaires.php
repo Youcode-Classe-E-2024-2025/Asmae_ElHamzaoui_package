@@ -39,7 +39,22 @@
 
     <!-- début  section2 -->
       <section id="auteur">
+         <!-- Formulaire pour insérer un nouvel auteur -->
+       <form action="" method="post">
+        <label for="">Nom d'auteur : </label><br>
+        <input type="text" name="nom_auteur" required><br><br>
 
+        <label for="">Prénom d'auteur :</label><br>
+        <input type="teatarea" name="prenom_auteur" required><br><br>
+
+        <label for="">Email du package : </label><br>
+        <input type="email" name="email_auteur" required><br>
+
+        <label for="">Date_Auteur : </label><br>
+        <input type="date" name="date_inscription_auteur" required><br>
+
+        <button type="submit">Ajouter l'auteur'</button>
+       </form>
       </section>
     <!-- Fin  section2 -->
 
