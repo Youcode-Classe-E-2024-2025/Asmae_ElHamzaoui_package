@@ -8,9 +8,18 @@
 
 
 <body>
+        <h1> Gestion des packages </h1>
+
+          <div>
+
+            <button onclick="">Ajouter Package</button>
+            <button onclick="">Ajouter Auteur</button>
+            <button onclick="">Ajouter Version</button>
+
+          </div>
     <!-- début  section1 -->
       <section id="package">
-
+        
       </section>
     <!-- Fin  section1 -->
 
