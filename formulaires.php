@@ -20,34 +20,21 @@
 
     <!-- début  section1 -->
       <section id="package">
-         <!-- Formulaire pour insérer un nouvel package -->
+       <!-- Formulaire pour insérer un nouvel package -->
        <form action="" method="post">
+        <label for="">Nom du package : </label><br>
+        <input type="text" name="nom_package" required><br><br>
 
-        <label for=""> Nom du package : </label>
-        <input type="text" name="nom_package" required>
+        <label for="">Description du package : </label><br>
+        <input type="teatarea" name="desc_package" required><br><br>
 
-        <label for=""> Description du package : </label>
-        <teatarea name="desc_package" required></teatarea>
-
-        <label for="">URL du package</label>
-        <input type="url" name="url_package" required>
+        <label for="">URL du package : </label><br>
+        <input type="url" name="url_package" required><br>
 
         <button type="submit">Ajouter le package </button>
-        
        </form>
-
-
-
-
       </section>
     <!-- Fin  section1 -->
-
-
-
-
-
-
-
 
 
     <!-- début  section2 -->
