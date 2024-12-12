@@ -1,9 +1,10 @@
+
 CREATE DATABASE gestion_packages; -- création de la base de données
 
 USE gestion_packages; -- utilisation de la base de données
 
 -- Table package
-CREATE TABLE package (
+CREATE TABLE G_Package (
   id_Package INT PRIMARY KEY AUTO_INCREMENT,
   nom_Package VARCHAR(255) NOT NULL,
   desc_Package VARCHAR(255) NOT NULL,
@@ -24,7 +25,7 @@ CREATE TABLE colaborations (
   id_Package INT,
   id_Auteur INT,
   PRIMARY KEY (id_Package, id_Auteur),
-  FOREIGN KEY (id_Package) REFERENCES package(id_Package),
+  FOREIGN KEY (id_Package) REFERENCES G_Package(id_Package),
   FOREIGN KEY (id_Auteur) REFERENCES auteur(id_Auteur),
   date_contribution DATE NOT NULL -- Changement de VARCHAR à DATE
 );
@@ -35,11 +36,8 @@ CREATE TABLE version (
   id_Package INT,
   num_version VARCHAR(255) NOT NULL,
   date_sortie_version DATE NOT NULL, -- Changement de VARCHAR à DATE
-  FOREIGN KEY (id_Package) REFERENCES package(id_Package)
+  FOREIGN KEY (id_Package) REFERENCES G_Package(id_Package)
 );
 
-SELECT * FROM package;
-
-ALTER TABLE package RENAME to G_Package;
-
 SELECT * FROM G_Package;
+
