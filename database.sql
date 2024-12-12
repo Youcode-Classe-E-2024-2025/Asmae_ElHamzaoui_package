@@ -37,3 +37,9 @@ CREATE TABLE version (
   date_sortie_version DATE NOT NULL, -- Changement de VARCHAR à DATE
   FOREIGN KEY (id_Package) REFERENCES package(id_Package)
 );
+
+SELECT * FROM package;
+
+ALTER TABLE package RENAME to G_Package;
+
+SELECT * FROM G_Package;
