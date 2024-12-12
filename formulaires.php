@@ -4,18 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="formulaires.css">
 </head>
 
 
 <body>
-        <h1> Gestion des packages </h1>
-
-          <div>
-
+        <h1 class="titre"> Gestion des packages </h1>
+          <div class="container">
             <button onclick="">Ajouter Package</button>
             <button onclick="">Ajouter Auteur</button>
             <button onclick="">Ajouter Version</button>
-
           </div>
     <!-- début  section1 -->
       <section id="package">

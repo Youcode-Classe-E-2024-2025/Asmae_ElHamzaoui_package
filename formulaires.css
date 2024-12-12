@@ -1,0 +1,26 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+
+.titre{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top:70px;
+}
+
+.container{
+  margin-top:30px;
+  text-align: center;
+}
+
+.container button{
+    margin:0px 30px;
+    width:150px;
+    height:50px;
+    text-align: center;
+    background-color: rgb(168, 175, 95);
+    font-weight: bold;
+    border-radius: 15px;
+  }
+
