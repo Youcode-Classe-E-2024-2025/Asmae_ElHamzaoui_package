@@ -1,4 +1,3 @@
-
 CREATE DATABASE gestion_packages; -- création de la base de données
 
 USE gestion_packages; -- utilisation de la base de données
