@@ -38,7 +38,7 @@
 
 
     <!-- début  section2 -->
-      <section id="auteur" class="formulaires">
+      <section id="auteur" class="formulaires" style="height:500px;">
          <!-- Formulaire pour insérer un nouvel auteur -->
        <form action="" method="post">
         <label for="">Nom d'auteur : </label><br>
@@ -53,7 +53,7 @@
         <label for="">Date_Auteur : </label><br>
         <input type="date" name="date_inscription_auteur" required><br>
 
-        <button type="submit">Ajouter l'auteur'</button>
+        <button type="submit">Ajouter le package </button>
        </form>
       </section>
     <!-- Fin  section2 -->
@@ -64,6 +64,30 @@
       </section>
     <!-- Fin  section3 -->
 
+    <?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Récupérer les données du formulaire
+    $nom_Package = $_POST['nom_Package'];
+    $desc_Package = $_POST['desc_Package'];
+    $url_Package = $_POST['url_Package'];
+    // Connexion à la base de données
+    $conn = new mysqli('localhost', 'root', '', 'gestion_packages');
+    if ($conn->connect_error) {
+        die("Connexion échouée: " . $conn->connect_error);
+    }
+    // Requête préparée pour éviter l'injection SQL
+    $stmt = $conn->prepare("INSERT INTO G_Package (nom_Package, desc_Package, url_Package) VALUES (?, ?, ?)");
+    $stmt->bind_param("sss", $nom_Package, $desc_Package, $url_Package);
+    // Exécution de la requête
+    if ($stmt->execute()) {
+        echo "Package ajouté avec succès!";
+    } else {
+        echo "Erreur lors de l'insertion: " . $stmt->error;
+    }
+    $stmt->close();
+    $conn->close();
+}
+?>
 </body>
 
 </html>
