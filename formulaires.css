@@ -33,7 +33,7 @@ padding-top:40px;
 
 }
 
-.formulaires input{
+.formulaires input,select{
     width:400px;
     height:50px;
     border: 1px solid black;

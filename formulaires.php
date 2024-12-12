@@ -53,16 +53,32 @@
         <label for="">Date_Auteur : </label><br>
         <input type="date" name="date_inscription_auteur" required><br>
 
-        <button type="submit">Ajouter le package </button>
+        <button type="submit">Ajouter l'auteur </button>
        </form>
       </section>
     <!-- Fin  section2 -->
 
-    <!-- début  section3 -->
-      <section id="version" class="formulaires">
+   <!-- début section3 : Formulaire pour ajouter une version -->
+<section id="version" class="formulaires">
+    <h2>Ajouter une Version</h2>
+    <form action="" method="post">
+        <label for="package_id">Sélectionner un Package :</label><br>
+        <select name="package_id" required>
+    
+        </select><br><br>
 
-      </section>
-    <!-- Fin  section3 -->
+        <label for="num_version">Numéro de version :</label><br>
+        <input type="text" name="num_version" required><br><br>
+
+        <label for="date_sortie_version">Date de sortie :</label><br>
+        <input type="date" name="date_sortie_version" required><br><br>
+
+        <button type="submit">Ajouter la Version</button>
+    </form>
+</section>
+<!-- Fin section3 -->
+
+
 
     <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
