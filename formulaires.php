@@ -11,9 +11,10 @@
 <body>
         <h1 class="titre"> Gestion des packages </h1>
           <div class="container">
-            <button onclick="">Ajouter Package</button>
-            <button onclick="">Ajouter Auteur</button>
-            <button onclick="">Ajouter Version</button>
+            <button id="btn-package">Ajouter Package</button>
+            <button id="btn-auteur">Ajouter Auteur</button>
+            <button id="btn-version">Ajouter Version</button>
+            <button id="btn-collaboration">colaboration</button>
           </div>
 
 
@@ -100,34 +101,7 @@
     </form>
 </section>
 <!-- Fin section4 -->
-
-
-
-
-    <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Récupérer les données du formulaire
-    $nom_Package = $_POST['nom_Package'];
-    $desc_Package = $_POST['desc_Package'];
-    $url_Package = $_POST['url_Package'];
-    // Connexion à la base de données
-    $conn = new mysqli('localhost', 'root', '', 'gestion_packages');
-    if ($conn->connect_error) {
-        die("Connexion échouée: " . $conn->connect_error);
-    }
-    // Requête préparée pour éviter l'injection SQL
-    $stmt = $conn->prepare("INSERT INTO G_Package (nom_Package, desc_Package, url_Package) VALUES (?, ?, ?)");
-    $stmt->bind_param("sss", $nom_Package, $desc_Package, $url_Package);
-    // Exécution de la requête
-    if ($stmt->execute()) {
-        echo "Package ajouté avec succès!";
-    } else {
-        echo "Erreur lors de l'insertion: " . $stmt->error;
-    }
-    $stmt->close();
-    $conn->close();
-}
-?>
+<script src="formulaires.js"></script>
 </body>
 
 </html>
