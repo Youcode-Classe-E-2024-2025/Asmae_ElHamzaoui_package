@@ -22,7 +22,7 @@
     <!-- début  section1 -->
       <section id="package" class="formulaires">
        <!-- Formulaire pour insérer un nouvel package -->
-       <form action="" method="post">
+       <form action="gestion_form.php" method="post">
         <label for="">Nom du package : </label><br>
         <input type="text" name="nom_package" required><br><br>
 
@@ -41,7 +41,7 @@
     <!-- début  section2 -->
       <section id="auteur" class="formulaires" style="height:500px;">
          <!-- Formulaire pour insérer un nouvel auteur -->
-       <form action="" method="post">
+       <form action="gestion_form.php" method="post">
         <label for="">Nom d'auteur : </label><br>
         <input type="text" name="nom_auteur" required><br><br>
 
@@ -62,7 +62,7 @@
    <!-- début section3 : Formulaire pour ajouter une version -->
 <section id="version" class="formulaires">
     <h2>Ajouter une Version</h2>
-    <form action="" method="post">
+    <form action="gestion_form.php" method="post">
         <label for="package_id">Sélectionner un Package :</label><br>
         <select name="package_id" required>
     
@@ -83,7 +83,7 @@
 <!-- début section4 : Formulaire pour ajouter une collaboration -->
 <section id="colaboration" class="formulaires">
     <h2>Associer un Auteur à un Package</h2>
-    <form action="" method="post">
+    <form action="gestion_form.php" method="post">
         <label for="package_id">Sélectionner un Package :</label><br>
         <select name="package_id" required>
         
