@@ -1,5 +1,5 @@
 <?php
-include 'db.php';  // Connexion à la base de données
+include 'connection.php';  // Connexion à la base de données
 
 // Traitement des soumissions des formulaires
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
