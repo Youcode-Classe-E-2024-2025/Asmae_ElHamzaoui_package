@@ -68,3 +68,31 @@ background-color: rgb(219, 211, 211);
         color:white;
         }
 
+  /* Stylisation générale de la table */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    border: 2px solid black;
+}
+/* Stylisation des en-têtes */
+th {
+    background-color: #f2f2f2;
+    padding: 12px;
+    text-align: left;
+    border: 1px solid #dddddd;
+}
+/* Stylisation des cellules */
+td {
+    padding: 12px;
+    border: 1px solid #67808f;
+}
+/* Stylisation de la ligne quand aucune donnée n'est trouvée */
+tr td[colspan="4"] {
+    text-align: center;
+    font-style: italic;
+    color: #888;
+}
+h2,td{
+  color:white;
+}
