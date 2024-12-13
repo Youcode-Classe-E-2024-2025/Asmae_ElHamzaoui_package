@@ -59,3 +59,22 @@ include 'db.php';  // Connexion à la base de données
         }
         $stmt->close();
     }
+
+
+      // traitement pour ajouter une collaboration
+      if (isset($_POST['auteur_id']) && isset($_POST['package_id'])) {
+        $package_id = $_POST['package_id'];
+        $auteur_id = $_POST['auteur_id'];
+        $date_contribution = $_POST['date_contribution'];
+
+        $sql = "INSERT INTO colaborations (id_Package, id_Auteur, date_contribution) VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("iis", $package_id, $auteur_id, $date_contribution);
+
+        if ($stmt->execute()) {
+            echo "Collaboration ajoutée avec succès!";
+        } else {
+            echo "Erreur : " . $stmt->error;
+        }
+        $stmt->close();
+    }
