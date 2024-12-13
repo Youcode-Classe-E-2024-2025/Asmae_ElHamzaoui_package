@@ -61,7 +61,6 @@
 
    <!-- début section3 : Formulaire pour ajouter une version -->
 <section id="version" class="formulaires">
-    <h2>Ajouter une Version</h2>
     <form action="gestion_form.php" method="post">
         <label for="package_id">Sélectionner un Package :</label><br>
         <select name="package_id" required>
@@ -90,7 +89,6 @@
 
 <!-- début section4 : Formulaire pour ajouter une collaboration -->
 <section id="colaboration" class="formulaires">
-    <h2>Associer un Auteur à un Package</h2>
     <form action="gestion_form.php" method="post">
         <label for="package_id">Sélectionner un Package :</label><br>
         <select name="package_id" required>
