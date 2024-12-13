@@ -123,6 +123,58 @@
     </form>
 </section>
 <!-- Fin section4 -->
+
+<!-- début section5 : Affichage des Auteurs -->
+<section id="affichage-auteurs">
+    <h2>Auteurs</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Auteur</th>
+                <th>Nom</th>
+                <th>Prénom</th>
+                <th>Email</th>
+                <th>Date d'Inscription</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                // Connexion à la base de données
+                include 'connection.php';
+
+                // Requête SQL pour récupérer tous les auteurs
+                $sql = "SELECT id_Auteur, nom_Auteur, prenom_Auteur, email_Auteur, date_inscription_Auteur FROM auteur";
+
+                // Exécution de la requête
+                $result = $conn->query($sql);
+
+                // Vérification s'il y a des résultats
+                if ($result->num_rows > 0) {
+                    // Affichage des données des auteurs dans le tableau
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . htmlspecialchars($row['id_Auteur']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['nom_Auteur']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['prenom_Auteur']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['email_Auteur']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['date_inscription_Auteur']) . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='5'>Aucun auteur trouvé.</td></tr>";
+                }
+
+                // Fermeture de la connexion
+                $conn->close();
+            ?>
+        </tbody>
+    </table>
+</section>
+<!-- Fin section5 -->
+
+
+
+
 <script src="formulaires.js"></script>
 </body>
 
