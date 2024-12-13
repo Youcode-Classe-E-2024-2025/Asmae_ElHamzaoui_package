@@ -65,7 +65,15 @@
     <form action="gestion_form.php" method="post">
         <label for="package_id">Sélectionner un Package :</label><br>
         <select name="package_id" required>
-    
+         <?php
+                // Connexion à la base de données et récupérer tous les packages
+                $conn = new mysqli('localhost', 'root', '', 'gestion_packages');
+                $result = $conn->query("SELECT id_Package, nom_Package FROM G_Package");
+                while ($row = $result->fetch_assoc()) {
+                    echo "<option value='" . $row['id_Package'] . "'>" . $row['nom_Package'] . "</option>";
+                }
+                $conn->close();
+            ?>
         </select><br><br>
 
         <label for="num_version">Numéro de version :</label><br>
