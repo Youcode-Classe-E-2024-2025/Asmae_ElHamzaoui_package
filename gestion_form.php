@@ -22,7 +22,7 @@ include 'db.php';  // Connexion à la base de données
     }
 
 
-    // Formulaire pour ajouter un auteur
+    // traitement pour ajouter un auteur
     if (isset($_POST['nom_auteur'])) {
         $nom_auteur = $_POST['nom_auteur'];
         $prenom_auteur = $_POST['prenom_auteur'];
@@ -35,6 +35,25 @@ include 'db.php';  // Connexion à la base de données
 
         if ($stmt->execute()) {
             echo "Auteur ajouté avec succès!";
+        } else {
+            echo "Erreur : " . $stmt->error;
+        }
+        $stmt->close();
+    }
+
+
+    // traitement pour ajouter une version
+    if (isset($_POST['num_version'])) {
+        $package_id = $_POST['package_id'];
+        $num_version = $_POST['num_version'];
+        $date_sortie_version = $_POST['date_sortie_version'];
+
+        $sql = "INSERT INTO version (id_Package, num_version, date_sortie_version) VALUES (?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("iss", $package_id, $num_version, $date_sortie_version);
+
+        if ($stmt->execute()) {
+            echo "Version ajoutée avec succès!";
         } else {
             echo "Erreur : " . $stmt->error;
         }
