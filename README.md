@@ -41,5 +41,5 @@ Une application web centralisée de gestion des packages JAVASCRIPT  et des aute
 Pour installer et démarrer l'application, commencez par cloner ce dépôt sur votre machine locale :
 
 ```bash
-git clone https://github.com/Youcode-Classe-E-2024-2025/Asmae_Elhamzaoui-fut.git
-cd Asmae_Elhamzaoui-fut 
+git clone https://github.com/Youcode-Classe-E-2024-2025/Asmae_ElHamzaoui_package
+cd Asmae_ElHamzaoui_package 
