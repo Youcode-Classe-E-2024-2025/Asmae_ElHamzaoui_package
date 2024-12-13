@@ -1,7 +1,8 @@
 <?php
 include 'db.php';  // Connexion à la base de données
 
-
+// Traitement des soumissions des formulaires
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // traitement pour ajouter un package
     if (isset($_POST['nom_package'])) {
@@ -78,3 +79,5 @@ include 'db.php';  // Connexion à la base de données
         }
         $stmt->close();
     }
+}
+?>
