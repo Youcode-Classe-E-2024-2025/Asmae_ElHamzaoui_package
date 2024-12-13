@@ -9,7 +9,7 @@
 
 
 <body>
-        <h1 class="titre"> Gestion des packages </h1>
+        <h1 class="titre"> Gestion des packages JAVASCRIPT </h1>
           <div class="container">
             <button id="btn-package">Ajouter Package</button>
             <button id="btn-auteur">Ajouter Auteur</button>
