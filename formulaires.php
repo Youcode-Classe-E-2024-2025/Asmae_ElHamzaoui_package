@@ -172,7 +172,47 @@
 </section>
 <!-- Fin section5 -->
 
-
+<!-- début section6 : Affichage des Packages -->
+<section id="affichage-packages">
+    <h2>Packages</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>ID Package</th>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>URL</th>
+            </tr>
+        </thead>
+        <tbody>
+            <?php
+                // Connexion à la base de données
+                include 'connection.php';
+                // Requête SQL pour récupérer tous les packages
+                $sql = "SELECT id_Package, nom_Package, desc_Package, url_Package FROM G_Package";
+                // Exécution de la requête
+                $result = $conn->query($sql);
+                // Vérification s'il y a des résultats
+                if ($result->num_rows > 0) {
+                    // Affichage des données des packages dans le tableau
+                    while ($row = $result->fetch_assoc()) {
+                        echo "<tr>";
+                        echo "<td>" . htmlspecialchars($row['id_Package']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['nom_Package']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['desc_Package']) . "</td>";
+                        echo "<td>" . htmlspecialchars($row['url_Package']) . "</td>";
+                        echo "</tr>";
+                    }
+                } else {
+                    echo "<tr><td colspan='4'>Aucun package trouvé.</td></tr>";
+                }
+                // Fermeture de la connexion
+                $conn->close();
+            ?>
+        </tbody>
+    </table>
+</section>
+<!-- Fin section6 -->
 
 
 <script src="formulaires.js"></script>
