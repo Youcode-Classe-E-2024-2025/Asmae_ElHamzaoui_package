@@ -7,16 +7,9 @@ Une application web centralisée de gestion des packages JAVASCRIPT  et des aute
 
 ## Fonctionnalités principales
 
-**Intégration UI et Ajout Dynamique des packagew**
+**Intégration UI et Ajout Dynamique des package**
 
 -   Formulaires permettant l'ajout des packages avec des champs .
-
-**Gestion des cartes de joueurs**
-
--   Ajout des packages
--   Ajout des auteurs
--   Ajout des versions
--   Ajout des colaborations
 
 **L'affichage des packages**
 -   Permettre l'affichage des packages 
@@ -30,7 +23,6 @@ Une application web centralisée de gestion des packages JAVASCRIPT  et des aute
 
 ## Table des matières
 
-- La gestion des tâches sur un Scrum Board : [Backlog · Asmae_Elhamzaoui-fut](https://github.com/orgs/Youcode-Classe-E-2024-2025/projects/53)
 -  Lien vers le repository GitHub contenant :[Repo · Asmae_Elhamzaoui_Package](https://github.com/Youcode-Classe-E-2024-2025/Asmae_ElHamzaoui_package)
 
  
@@ -97,7 +89,7 @@ cd Asmae_ElHamzaoui_package
 - **Style et animations** : Ajoutés avec CSS et JavaScript.
 
 ## Structure du Projet
- ![Structure du projet](structure.jpg)
+ ![Structure du projet](structure.png)
 ## Outils Utilisés
 
 - **Serveur Web Apache** : Hébergement du projet localement.
