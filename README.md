@@ -25,7 +25,14 @@ Une application web centralisée de gestion des packages JAVASCRIPT  et des aute
 
 -  Lien vers le repository GitHub contenant :[Repo · Asmae_Elhamzaoui_Package](https://github.com/Youcode-Classe-E-2024-2025/Asmae_ElHamzaoui_package)
 
- 
+-  Le diagramme ERD :
+ ![Structure du projet](images/ERD.png)
+
+-  Le diagramme du cas d'utilisation :
+ ![Structure du projet](images/USpackage.png)
+ ![Structure du projet](images/USAuteur.png)
+ ![Structure du projet](images/UCversion.png)
+
 ## Installation
 
 ### Cloner le dépôt
@@ -89,7 +96,7 @@ cd Asmae_ElHamzaoui_package
 - **Style et animations** : Ajoutés avec CSS et JavaScript.
 
 ## Structure du Projet
- ![Structure du projet](structure.png)
+ ![Structure du projet](images/structure.png)
 ## Outils Utilisés
 
 - **Serveur Web Apache** : Hébergement du projet localement.
